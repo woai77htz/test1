@@ -1,3 +1,5 @@
+from log_decorator import log_decorator
+
 
 class Game:
 
@@ -10,6 +12,7 @@ class Game:
         # 定义一个私有属性
         self.__private = 404
 
+    @log_decorator
     def fight(self):
         count = 0
         while True:
@@ -32,14 +35,18 @@ class Game:
                 print("我赢了")
                 print(f"回合次数{count}")
                 break
+
     def xiuxi(self, time_num):
+        print(self.__private)
+        self.__private__method()
         print(f"太累了 休息{time_num} 分钟")
 
     # 定义一个私有方法
     def __private__method(self):
         print("这是一个私有方法")
 
-if __name__ == '__main__':
-    game = Game(1000,100)
-    game.fight()
 
+if __name__ == '__main__':
+    game = Game(1000, 100)
+    game.fight()
+    game.xiuxi(3)
