@@ -7,6 +7,8 @@ class Game:
         self.my_power = 200
         self.enemy_hp = enemy_hp
         self.enemy_power = 199
+        # 定义一个私有属性
+        self.__private = 404
 
     def fight(self):
         count = 0
@@ -33,6 +35,11 @@ class Game:
     def xiuxi(self, time_num):
         print(f"太累了 休息{time_num} 分钟")
 
+    # 定义一个私有方法
+    def __private__method(self):
+        print("这是一个私有方法")
+
 if __name__ == '__main__':
     game = Game(1000,100)
     game.fight()
+
