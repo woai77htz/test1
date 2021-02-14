@@ -1,11 +1,11 @@
 
 class Game:
 
-    def __init__(self):
+    def __init__(self, my_hp, enemy_hp):
         # 初始化属性
-        self.my_hp = 1000
+        self.my_hp = my_hp
         self.my_power = 200
-        self.enemy_hp = 1000
+        self.enemy_hp = enemy_hp
         self.enemy_power = 199
 
     def fight(self):
@@ -30,7 +30,9 @@ class Game:
                 print("我赢了")
                 print(f"回合次数{count}")
                 break
+    def xiuxi(self, time_num):
+        print(f"太累了 休息{time_num} 分钟")
 
 if __name__ == '__main__':
-    game = Game()
+    game = Game(1000,100)
     game.fight()

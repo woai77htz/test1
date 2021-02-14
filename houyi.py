@@ -5,7 +5,7 @@ class HouYi(Game):
     def __init__(self):
         self.defense = 100
         # 继承父类构造方法
-        super().__init__()
+        super().__init__(1000,100)
 
     def fight(self):
         count = 0
@@ -35,4 +35,5 @@ class HouYi(Game):
 if __name__ == '__main__':
     houyi = HouYi()
     houyi.fight()
+    houyi.xiuxi(3)
 
